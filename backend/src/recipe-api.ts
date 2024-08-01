@@ -1,8 +1,9 @@
-const apiKey = process.env.API_KEY;
+require('dotenv').config()
+const apiKey = process.env.REACT_APP_API_KEY;
 
 
 export const searchRecipes = async (searchTerm: string, page: number) => {
-  console.log("here it isssssss");
+  // console.log(apiKey);
   if (!apiKey) {
     throw new Error("API Key not found");
   }
@@ -27,7 +28,7 @@ export const searchRecipes = async (searchTerm: string, page: number) => {
 };
 
 export const getRecipeSummary = async (recipeId: string) => {
-  console.log("here it is  ",apiKey);
+  console.log(apiKey);
   if (!apiKey) {
     throw new Error("API Key not found");
   }

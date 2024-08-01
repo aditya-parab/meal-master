@@ -97,7 +97,7 @@ app.delete("/api/recipes/favourite", (req, res) => __awaiter(void 0, void 0, voi
         return res.status(500).json({ error: "Oops, something went wrong" });
     }
 }));
-const port = process.env.PORT || 5100;
+const port = process.env.PORT||5100;
 app.listen(port, () => {
-    console.log(`Server running on port ${port}`);
+  console.log(`Server running on port ${port}`);
 });

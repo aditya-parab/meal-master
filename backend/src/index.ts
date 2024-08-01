@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-// import "dotenv/config";
+require('dotenv').config({path: './env'});
 import * as RecipeAPI from "./recipe-api";
 import { PrismaClient } from "@prisma/client";
 
@@ -72,7 +72,7 @@ app.delete("/api/recipes/favourite", async (req, res) => {
 
 
 
-const port = process.env.PORT || 5100;
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+// const port = process.env.PORT || 5100;
+// app.listen(port, () => {
+//   console.log(`Server running on port ${port}`);
+// });
