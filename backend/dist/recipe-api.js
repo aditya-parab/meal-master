@@ -1,6 +1,4 @@
 "use strict";
-const dotenv = require("dotenv");
-dotenv.config();
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -12,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getFavouriteRecipesByIDs = exports.getRecipeSummary = exports.searchRecipes = void 0;
-const apiKey = process.env.REACT_APP_API_KEY;
+const apiKey = process.env.API_KEY;
 const searchRecipes = (searchTerm, page) => __awaiter(void 0, void 0, void 0, function* () {
     if (!apiKey) {
         throw new Error("API Key not found");
