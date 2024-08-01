@@ -67,7 +67,7 @@ app.post("/api/recipes/favourite", (req, res) => __awaiter(void 0, void 0, void 
     }
     catch (error) {
         console.log(error);
-        return res.status(500).json({ error: "Oops, something went wrong" });
+        return res.status(500).json({ error: "Oops!" });
     }
 }));
 app.get("/api/recipes/favourite", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -97,6 +97,7 @@ app.delete("/api/recipes/favourite", (req, res) => __awaiter(void 0, void 0, voi
         return res.status(500).json({ error: "Oops, something went wrong" });
     }
 }));
-app.listen(5100, () => {
-    console.log("server running on localhost:5100");
+const port = process.env.PORT || 5100;
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
 });

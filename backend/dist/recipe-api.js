@@ -25,11 +25,15 @@ const searchRecipes = (searchTerm, page) => __awaiter(void 0, void 0, void 0, fu
     url.search = new URLSearchParams(queryParams).toString();
     try {
         const searchResponse = yield fetch(url);
+        if (!searchResponse.ok) {
+            throw new Error(`API request failed with status ${searchResponse.status}`);
+        }
         const resultsJson = yield searchResponse.json();
         return resultsJson;
     }
     catch (error) {
-        console.log(error);
+        console.error("Error fetching recipes:", error);
+        throw error; // Re-throw for handling in the route
     }
 });
 exports.searchRecipes = searchRecipes;

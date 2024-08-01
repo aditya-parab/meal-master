@@ -17,17 +17,12 @@ export const searchRecipes = async (searchTerm: string, page: number) => {
 
   try {
     const searchResponse = await fetch(url);
-    if (!searchResponse.ok) {
-      throw new Error(`API request failed with status ${searchResponse.status}`);
-    }
     const resultsJson = await searchResponse.json();
     return resultsJson;
   } catch (error) {
-    console.error("Error fetching recipes:", error);
-    throw error; // Re-throw for handling in the route
+    console.log(error);
   }
 };
-
 
 export const getRecipeSummary = async (recipeId: string) => {
   if (!apiKey) {
