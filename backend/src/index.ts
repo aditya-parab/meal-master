@@ -36,7 +36,7 @@ app.post("/api/recipes/favourite", async (req, res) => {
     return res.status(201).json(favouriteRecipe);
   } catch (error) {
     console.log(error);
-    return res.status(500).json({ error: error as string });
+    return res.status(500).json({ error: "Oops!" });
   }
 });
 
