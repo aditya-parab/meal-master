@@ -8,6 +8,6 @@ datasource db {
 }
 
 model FavouriteRecipes {
-  id       String @id @default(auto()) @map("_id") @db.ObjectId
-  recipeId Int    @unique
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  recipeId  Int    @unique
 }

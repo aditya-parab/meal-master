@@ -1,6 +1,8 @@
 const apiKey = process.env.API_KEY;
 
+
 export const searchRecipes = async (searchTerm: string, page: number) => {
+  console.log("here it isssssss");
   if (!apiKey) {
     throw new Error("API Key not found");
   }
@@ -25,6 +27,7 @@ export const searchRecipes = async (searchTerm: string, page: number) => {
 };
 
 export const getRecipeSummary = async (recipeId: string) => {
+  console.log("here it is  ",apiKey);
   if (!apiKey) {
     throw new Error("API Key not found");
   }
@@ -44,6 +47,7 @@ export const getRecipeSummary = async (recipeId: string) => {
 };
 
 export const getFavouriteRecipesByIDs = async (ids: string[]) => {
+  console.log("here it is  ",apiKey);
   if (!apiKey) {
     throw new Error("API Key not found");
   }

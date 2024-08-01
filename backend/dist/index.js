@@ -37,7 +37,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
-require("dotenv/config");
+// import "dotenv/config";
 const RecipeAPI = __importStar(require("./recipe-api"));
 const client_1 = require("@prisma/client");
 const app = (0, express_1.default)();
@@ -67,7 +67,7 @@ app.post("/api/recipes/favourite", (req, res) => __awaiter(void 0, void 0, void 
     }
     catch (error) {
         console.log(error);
-        return res.status(500).json({ error: "Oops!" });
+        return res.status(500).json({ error: "oopss" });
     }
 }));
 app.get("/api/recipes/favourite", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
