@@ -1,5 +1,5 @@
 # meal-master
-
+## ARCHITECTURE DIAGRAM:
 ![Architecture design](https://github.com/user-attachments/assets/b38f0fd7-0de5-4d79-967f-0548dd79a53e)
 
 
